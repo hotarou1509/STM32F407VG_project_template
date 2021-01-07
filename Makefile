@@ -23,6 +23,7 @@ ASM_DIRS			+= $(DEVICE_DIR)/src
 # include folders:
 INC_DIRS			+= $(PROJ_DIR)/Core/Include
 INC_DIRS			+= $(DEVICE_DIR)/inc
+INC_DIRS			+= $(PROJ_DIR)/inc
 
 # linker file:
 LINKER_SCRIPT		+= $(DEVICE_DIR)/linker/$(DEVICE_NAME).ld
