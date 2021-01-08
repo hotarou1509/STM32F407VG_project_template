@@ -1,9 +1,9 @@
 ############################### DIRECTORIES ################################
-PROJ_DIR			:= ~/workspace/mcu/demo/blink_led
+PROJ_DIR			:= ~/workspace/mcu/demo/simple_uart
 
 DEVICE_NAME			:= STM32F407VG
 
-PROJ_NAME			:= $(DEVICE_NAME)_blink_led
+PROJ_NAME			:= $(DEVICE_NAME)_simple_uart
 DEVICE_DIR			:= $(PROJ_DIR)/Device/$(DEVICE_NAME)
 
 # ARM Compiler Lib
@@ -16,6 +16,7 @@ BUILD_DIR			:= $(PROJ_DIR)/output
 # list folder contains C files
 CC_DIRS				+= $(PROJ_DIR)/src
 CC_DIRS				+= $(DEVICE_DIR)/src
+CC_DIRS				+= $(PROJ_DIR)/drivers/$(DEVICE_NAME)/src
 
 # list folder contains ASM files
 ASM_DIRS			+= $(DEVICE_DIR)/src
@@ -23,7 +24,7 @@ ASM_DIRS			+= $(DEVICE_DIR)/src
 # include folders:
 INC_DIRS			+= $(PROJ_DIR)/Core/Include
 INC_DIRS			+= $(DEVICE_DIR)/inc
-INC_DIRS			+= $(PROJ_DIR)/inc
+INC_DIRS			+= $(PROJ_DIR)/drivers/$(DEVICE_NAME)/inc
 
 # linker file:
 LINKER_SCRIPT		+= $(DEVICE_DIR)/linker/$(DEVICE_NAME).ld

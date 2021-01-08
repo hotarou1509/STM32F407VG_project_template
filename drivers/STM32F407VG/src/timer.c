@@ -1,6 +1,6 @@
 /**************************************************************************
 *
-*	Purpose	:	Managing project's header file
+*	Purpose	:	Managing project's C file
 *	Author	:	THAI VIET LE
 *	Updated	:	1/7/2021
 *	
@@ -12,6 +12,8 @@
 * 2.	Set the prescalar and the ARR
 * 3.	Enable the Timer and wait for the Update Flag to Set
 **************************************************************************/
+
+#include "timer.h"
 
 void Timer_Init(void){
 	// 1.	Enable Timer Clock

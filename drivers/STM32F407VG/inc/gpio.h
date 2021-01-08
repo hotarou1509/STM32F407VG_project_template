@@ -16,15 +16,12 @@
 ***************************************************************************
 */
 
-void GPIO_Init(void){
-	// 1. Enable GPIOD clock
-	RCC->AHB1ENR |= (1<<3);
+#ifndef __GPIO_H__
+#define __GPIO_H__
 
-	// 2. Set the PIN PD13 as OUTPUT
-	GPIOD->MODER |= (1<<26);
+#include "hw_platform.h"
 
-	// 3. Configure the output mode
-	GPIOD->OTYPER &= ~(1<<13); // bit 5=0 => Output push pull
-	GPIOD->OSPEEDR |= (1<<27); // Pin PD13 as Fast Speed (1:0)
-	GPIOD->PUPDR &= ~((1<<26) | (1<<27));
-}
+extern void GPIO_Init(void);
+extern void Set_Pin(uint8_t level, uint8_t pin);
+
+#endif
