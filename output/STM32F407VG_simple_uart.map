@@ -1,0 +1,432 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+                              /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o (__libc_init_array)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x0000000000020000 xrw
+CCMRAM           0x0000000010000000 0x0000000000010000 xrw
+FLASH            0x0000000008000000 0x0000000000100000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000020020000                _estack = 0x20020000
+                0x0000000000000200                _Min_Heap_Size = 0x200
+                0x0000000000000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x0000000008000000      0x188
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x188 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+                0x0000000008000000                g_pfnVectors
+                0x0000000008000188                . = ALIGN (0x4)
+
+.text           0x0000000008000188      0x68c
+                0x0000000008000188                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000008000188       0x94 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+                0x0000000008000188                _init
+                0x00000000080001a0                main
+ .text          0x000000000800021c      0x12c /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+                0x000000000800021c                SystemInit
+                0x0000000008000248                SystemCoreClockUpdate
+ .text          0x0000000008000348       0xe4 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+                0x0000000008000348                UART_Init
+                0x00000000080003ac                UART_SendChar
+                0x00000000080003dc                UART_SendString
+                0x0000000008000406                UART_GetChar
+ .text          0x000000000800042c       0xb4 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+                0x000000000800042c                Clock_Init
+ .text          0x00000000080004e0      0x120 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+                0x00000000080004e0                GPIO_Init
+                0x00000000080005a4                Set_Pin
+ .text          0x0000000008000600       0x60 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+                0x0000000008000600                Delay_us
+                0x0000000008000630                Delay_ms
+ .text          0x0000000008000660       0xb8 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+                0x0000000008000660                led_on
+                0x00000000080006ba                led_off
+ .text          0x0000000008000718       0x4c /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+                0x0000000008000718                Timer_Init
+ .text          0x0000000008000764       0x14 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .text          0x0000000008000778       0x48 /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+                0x0000000008000778                __libc_init_array
+ *(.text*)
+ .text.Reset_Handler
+                0x00000000080007c0       0x50 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+                0x00000000080007c0                Reset_Handler
+ .text.Default_Handler
+                0x0000000008000810        0x2 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+                0x0000000008000810                RTC_Alarm_IRQHandler
+                0x0000000008000810                HASH_RNG_IRQHandler
+                0x0000000008000810                EXTI2_IRQHandler
+                0x0000000008000810                TIM8_CC_IRQHandler
+                0x0000000008000810                DebugMon_Handler
+                0x0000000008000810                TIM1_CC_IRQHandler
+                0x0000000008000810                DMA2_Stream5_IRQHandler
+                0x0000000008000810                HardFault_Handler
+                0x0000000008000810                DMA1_Stream5_IRQHandler
+                0x0000000008000810                SysTick_Handler
+                0x0000000008000810                PVD_IRQHandler
+                0x0000000008000810                SDIO_IRQHandler
+                0x0000000008000810                TAMP_STAMP_IRQHandler
+                0x0000000008000810                PendSV_Handler
+                0x0000000008000810                NMI_Handler
+                0x0000000008000810                CAN2_RX1_IRQHandler
+                0x0000000008000810                EXTI3_IRQHandler
+                0x0000000008000810                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008000810                TIM1_UP_TIM10_IRQHandler
+                0x0000000008000810                TIM8_UP_TIM13_IRQHandler
+                0x0000000008000810                I2C3_ER_IRQHandler
+                0x0000000008000810                EXTI0_IRQHandler
+                0x0000000008000810                I2C2_EV_IRQHandler
+                0x0000000008000810                DMA1_Stream2_IRQHandler
+                0x0000000008000810                CAN1_RX0_IRQHandler
+                0x0000000008000810                FPU_IRQHandler
+                0x0000000008000810                OTG_HS_WKUP_IRQHandler
+                0x0000000008000810                UsageFault_Handler
+                0x0000000008000810                CAN2_SCE_IRQHandler
+                0x0000000008000810                DMA2_Stream2_IRQHandler
+                0x0000000008000810                SPI1_IRQHandler
+                0x0000000008000810                TIM6_DAC_IRQHandler
+                0x0000000008000810                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008000810                DCMI_IRQHandler
+                0x0000000008000810                CAN2_RX0_IRQHandler
+                0x0000000008000810                DMA2_Stream3_IRQHandler
+                0x0000000008000810                USART6_IRQHandler
+                0x0000000008000810                USART3_IRQHandler
+                0x0000000008000810                CAN1_RX1_IRQHandler
+                0x0000000008000810                UART5_IRQHandler
+                0x0000000008000810                DMA2_Stream0_IRQHandler
+                0x0000000008000810                TIM4_IRQHandler
+                0x0000000008000810                I2C1_EV_IRQHandler
+                0x0000000008000810                DMA1_Stream6_IRQHandler
+                0x0000000008000810                DMA1_Stream1_IRQHandler
+                0x0000000008000810                UART4_IRQHandler
+                0x0000000008000810                TIM3_IRQHandler
+                0x0000000008000810                RCC_IRQHandler
+                0x0000000008000810                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008000810                Default_Handler
+                0x0000000008000810                EXTI15_10_IRQHandler
+                0x0000000008000810                ADC_IRQHandler
+                0x0000000008000810                DMA1_Stream7_IRQHandler
+                0x0000000008000810                TIM7_IRQHandler
+                0x0000000008000810                CAN2_TX_IRQHandler
+                0x0000000008000810                TIM5_IRQHandler
+                0x0000000008000810                DMA2_Stream7_IRQHandler
+                0x0000000008000810                I2C3_EV_IRQHandler
+                0x0000000008000810                EXTI9_5_IRQHandler
+                0x0000000008000810                RTC_WKUP_IRQHandler
+                0x0000000008000810                ETH_WKUP_IRQHandler
+                0x0000000008000810                SPI2_IRQHandler
+                0x0000000008000810                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008000810                MemManage_Handler
+                0x0000000008000810                DMA1_Stream0_IRQHandler
+                0x0000000008000810                CAN1_TX_IRQHandler
+                0x0000000008000810                SVC_Handler
+                0x0000000008000810                EXTI4_IRQHandler
+                0x0000000008000810                FSMC_IRQHandler
+                0x0000000008000810                ETH_IRQHandler
+                0x0000000008000810                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008000810                WWDG_IRQHandler
+                0x0000000008000810                TIM2_IRQHandler
+                0x0000000008000810                OTG_FS_WKUP_IRQHandler
+                0x0000000008000810                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008000810                OTG_HS_IRQHandler
+                0x0000000008000810                EXTI1_IRQHandler
+                0x0000000008000810                USART2_IRQHandler
+                0x0000000008000810                I2C2_ER_IRQHandler
+                0x0000000008000810                DMA2_Stream1_IRQHandler
+                0x0000000008000810                CAN1_SCE_IRQHandler
+                0x0000000008000810                FLASH_IRQHandler
+                0x0000000008000810                DMA2_Stream4_IRQHandler
+                0x0000000008000810                BusFault_Handler
+                0x0000000008000810                USART1_IRQHandler
+                0x0000000008000810                OTG_FS_IRQHandler
+                0x0000000008000810                SPI3_IRQHandler
+                0x0000000008000810                DMA1_Stream4_IRQHandler
+                0x0000000008000810                I2C1_ER_IRQHandler
+                0x0000000008000810                DMA2_Stream6_IRQHandler
+                0x0000000008000810                DMA1_Stream3_IRQHandler
+ *(.glue_7)
+ .glue_7        0x0000000008000812        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000008000812        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x0000000008000814                . = ALIGN (0x4)
+ *fill*         0x0000000008000812        0x2 
+                0x0000000008000814                _etext = .
+
+.vfp11_veneer   0x0000000008000814        0x0
+ .vfp11_veneer  0x0000000008000814        0x0 linker stubs
+
+.v4_bx          0x0000000008000814        0x0
+ .v4_bx         0x0000000008000814        0x0 linker stubs
+
+.iplt           0x0000000008000814        0x0
+ .iplt          0x0000000008000814        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+
+.rodata         0x0000000008000814       0x28
+                0x0000000008000814                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x0000000008000814       0x10 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .rodata        0x0000000008000824       0x18 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+                0x0000000008000824                AHBPrescTable
+                0x0000000008000834                APBPrescTable
+ *(.rodata*)
+                0x000000000800083c                . = ALIGN (0x4)
+
+.rel.dyn        0x000000000800083c        0x0
+ .rel.iplt      0x000000000800083c        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x000000000800083c        0x0
+                0x000000000800083c                __exidx_start = .
+ *(.ARM.exidx*)
+                0x000000000800083c                __exidx_end = .
+
+.preinit_array  0x000000000800083c        0x0
+                0x000000000800083c                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x000000000800083c                PROVIDE (__preinit_array_end = .)
+
+.init_array     0x000000000800083c        0x0
+                0x000000000800083c                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                0x000000000800083c                PROVIDE (__init_array_end = .)
+
+.fini_array     0x000000000800083c        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x000000000800083c                _sidata = LOADADDR (.data)
+
+.data           0x0000000020000000        0x4 load address 0x000000000800083c
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ .data          0x0000000020000000        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .data          0x0000000020000000        0x4 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+                0x0000000020000000                SystemCoreClock
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .data          0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .data          0x0000000020000004        0x0 /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+ *(.data*)
+                0x0000000020000004                . = ALIGN (0x4)
+                0x0000000020000004                _edata = .
+                0x0000000008000840                _siccmram = LOADADDR (.ccmram)
+
+.igot.plt       0x0000000020000004        0x0 load address 0x0000000008000840
+ .igot.plt      0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+
+.ccmram         0x0000000010000000        0x0 load address 0x0000000008000840
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _sccmram = .
+ *(.ccmram)
+ *(.ccmram*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _eccmram = .
+                0x0000000010000000                . = ALIGN (0x4)
+
+.bss            0x0000000020000004        0x0
+                0x0000000020000004                _sbss = .
+                0x0000000020000004                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .bss           0x0000000020000004        0x0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .bss           0x0000000020000004        0x0 /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+ *(.bss*)
+ *(COMMON)
+                0x0000000020000004                . = ALIGN (0x4)
+                0x0000000020000004                _ebss = .
+                0x0000000020000004                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x0000000020000004      0x604
+                0x0000000020000008                . = ALIGN (0x8)
+ *fill*         0x0000000020000004        0x4 
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x0000000020000208                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000008      0x200 
+                0x0000000020000608                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000208      0x400 
+                0x0000000020000608                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x0000000000000000       0x32
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .ARM.attributes
+                0x0000000000000034       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .ARM.attributes
+                0x0000000000000068       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .ARM.attributes
+                0x000000000000009c       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .ARM.attributes
+                0x00000000000000d0       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .ARM.attributes
+                0x0000000000000104       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .ARM.attributes
+                0x0000000000000138       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .ARM.attributes
+                0x000000000000016c       0x34 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .ARM.attributes
+                0x00000000000001a0       0x21 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .ARM.attributes
+                0x00000000000001c1       0x34 /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+LOAD /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+LOAD /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+LOAD /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+OUTPUT(/home/hotarou1509/workspace/mcu/demo/simple_uart/output/STM32F407VG_simple_uart.elf elf32-littlearm)
+LOAD linker stubs
+LOAD /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+LOAD /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+
+.debug_info     0x0000000000000000     0x1ae5
+ .debug_info    0x0000000000000000      0x173 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .debug_info    0x0000000000000173      0x51e /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .debug_info    0x0000000000000691      0x3d2 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .debug_info    0x0000000000000a63      0x382 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .debug_info    0x0000000000000de5      0x3b7 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .debug_info    0x000000000000119c      0x29f /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .debug_info    0x000000000000143b      0x15b /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .debug_info    0x0000000000001596      0x413 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .debug_info    0x00000000000019a9       0x22 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .debug_info    0x00000000000019cb      0x11a /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+
+.debug_abbrev   0x0000000000000000      0x8fa
+ .debug_abbrev  0x0000000000000000       0xdc /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .debug_abbrev  0x00000000000000dc      0x126 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000202      0x15a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .debug_abbrev  0x000000000000035c       0xd9 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .debug_abbrev  0x0000000000000435      0x117 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .debug_abbrev  0x000000000000054c      0x120 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .debug_abbrev  0x000000000000066c       0xd7 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .debug_abbrev  0x0000000000000743       0xd9 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .debug_abbrev  0x000000000000081c       0x12 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .debug_abbrev  0x000000000000082e       0xcc /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+
+.debug_aranges  0x0000000000000000      0x148
+ .debug_aranges
+                0x0000000000000000       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .debug_aranges
+                0x0000000000000020       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .debug_aranges
+                0x0000000000000040       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .debug_aranges
+                0x0000000000000060       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .debug_aranges
+                0x0000000000000080       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .debug_aranges
+                0x00000000000000a0       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .debug_aranges
+                0x00000000000000c0       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .debug_aranges
+                0x00000000000000e0       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .debug_aranges
+                0x0000000000000100       0x28 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .debug_aranges
+                0x0000000000000128       0x20 /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+
+.debug_line     0x0000000000000000      0xfd3
+ .debug_line    0x0000000000000000      0x1ae /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .debug_line    0x00000000000001ae      0x207 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .debug_line    0x00000000000003b5      0x1ca /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .debug_line    0x000000000000057f      0x1dd /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .debug_line    0x000000000000075c      0x1b0 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .debug_line    0x000000000000090c      0x1b4 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .debug_line    0x0000000000000ac0      0x1ae /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .debug_line    0x0000000000000c6e      0x19d /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .debug_line    0x0000000000000e0b       0xbb /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+ .debug_line    0x0000000000000ec6      0x10d /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+
+.debug_str      0x0000000000000000      0x8c6
+ .debug_str     0x0000000000000000      0x1a7 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+                                        0x1e3 (size before relaxing)
+ .debug_str     0x00000000000001a7      0x1e2 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+                                        0x383 (size before relaxing)
+ .debug_str     0x0000000000000389       0xae /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+                                        0x34b (size before relaxing)
+ .debug_str     0x0000000000000437       0x8b /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+                                        0x328 (size before relaxing)
+ .debug_str     0x00000000000004c2       0x9a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+                                        0x332 (size before relaxing)
+ .debug_str     0x000000000000055c       0xb1 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+                                        0x24d (size before relaxing)
+ .debug_str     0x000000000000060d       0x5e /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+                                        0x1fa (size before relaxing)
+ .debug_str     0x000000000000066b       0x5c /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+                                        0x339 (size before relaxing)
+ .debug_str     0x00000000000006c7       0x6a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+                                         0x9b (size before relaxing)
+ .debug_str     0x0000000000000731      0x195 /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+                                        0x224 (size before relaxing)
+
+.comment        0x0000000000000000       0xa7
+ .comment       0x0000000000000000       0x59 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+                                         0x5a (size before relaxing)
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .comment       0x0000000000000059       0x5a /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .comment       0x0000000000000059       0x4e /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+                                         0x4f (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x2e0
+ .debug_frame   0x0000000000000000       0x4c /home/hotarou1509/workspace/mcu/demo/simple_uart/output/main.o
+ .debug_frame   0x000000000000004c       0x58 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/system_stm32f4xx.o
+ .debug_frame   0x00000000000000a4       0xa4 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/uart.o
+ .debug_frame   0x0000000000000148       0x30 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/clock.o
+ .debug_frame   0x0000000000000178       0x58 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/gpio.o
+ .debug_frame   0x00000000000001d0       0x5c /home/hotarou1509/workspace/mcu/demo/simple_uart/output/delay.o
+ .debug_frame   0x000000000000022c       0x58 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/led.o
+ .debug_frame   0x0000000000000284       0x30 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/timer.o
+ .debug_frame   0x00000000000002b4       0x2c /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+
+.debug_ranges   0x0000000000000000       0x20
+ .debug_ranges  0x0000000000000000       0x20 /home/hotarou1509/workspace/mcu/demo/simple_uart/output/startup_stm32f407xx.o
+
+.debug_loc      0x0000000000000000       0xba
+ .debug_loc     0x0000000000000000       0xba /usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)

@@ -17,5 +17,6 @@
 #include "delay.h"
 #include "gpio.h"
 #include "led.h"
+#include "uart.h"
 
 #endif

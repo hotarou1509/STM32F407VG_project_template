@@ -10,31 +10,44 @@
 
 #include "project.h"
 
-#define LD3 3
-#define LD4 4
-#define	LD5	5
-#define LD6 6
+#define LED_ORANGE 3
+#define LED_GREEN 4
+#define LED_RED 5
+#define LED_BLUE 6
 
-void _init(void){}
-
-int main(void){
-	/* INITIALLIZING */
+void _init(void)
+{
+	/* INITIALIZING */
 	Clock_Init();
 	Timer_Init();
 	GPIO_Init();
-	
-	int arr[4] = {LD3, LD4, LD6, LD5};
+	UART_Init();
+}
 
-	while(1){
-		
-		for (int i=0; i<4; i++){
+int main(void)
+{
+	/* INITIALIZING */
+	_init();
+
+	int arr[4] = {LED_ORANGE, LED_GREEN, LED_BLUE, LED_RED};
+
+	/* MAIN LOOP */
+	while (1)
+	{
+		for (int i = 0; i < 4; i++)
+		{
 			led_on(arr[i]);
 			Delay_ms(250);
 		}
 
-		for (int i=0; i<4; i++){
+		UART_SendChar('G');
+
+		for (int i = 0; i < 4; i++)
+		{
 			led_off(arr[i]);
 			Delay_ms(250);
 		}
+		// uint8_t data = UART_GetChar();
+		// UART_SendChar(data);
 	}
 }
